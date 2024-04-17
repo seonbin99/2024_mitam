@@ -17,9 +17,6 @@ body {
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
     background: #e31d02;
 }
-#sec1 .textbox::before {
-    z-index: 1; /* 또는 필요에 따라 원하는 z-index 값으로 설정합니다. */
-}
 
 /* header */
 
@@ -297,10 +294,10 @@ header .centerbox .navbox li .lnb li:hover a {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 10;
 }
-#visual .textbox::before {
-    content: "";
+
+#visual .textbox .deco {
     position: absolute;
     top: 50%;
     left: 50%;
