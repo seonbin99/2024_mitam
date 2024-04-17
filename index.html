@@ -178,23 +178,14 @@
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 //options here
-                anchors:['sec1', 'sec2','sec3','sec4','sec5'],
                 navigation: true,
                 navigationPosition: 'right',
                 autoScrolling:true,
                 scrollHorizontally: true,
                 fixedElements: 'header',
-                autoScrolling: true,
 	            fitToSection: true,
                 responsiveHeight: true,
 
-                // onLeave: function(name, index){
-                //     console.log(name, index);
-                //     $('nav li').css({background:''});
-                //     $('nav li a').css({color:''});
-                //     $('nav li').eq(index-1).css({background:'#000'});
-                //     $('nav li').eq(index-1).find('a').css({color:'#fff'});
-                // },
             });
 
         });
