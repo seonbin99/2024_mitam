@@ -291,6 +291,7 @@ header .centerbox .navbox li .lnb li:hover a {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 #visual .textbox::before {
     content: "";
@@ -487,6 +488,9 @@ footer .sns a.facebook svg {
 footer .sns a.insta svg {
     width: 70px;
     height: 60px;
+}
+footer a {
+    color: #fff;
 }
 
 @media screen and (max-width:1100px) {
