@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>미탐시티</title>
-    <link rel="stylesheet" href="css/style.css?">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/jquery.fullPage.css">
 </head>
 <body>        
@@ -93,7 +93,7 @@
             </nav>
         </div>
     </header>
-    <!-- <nav>
+    <nav class="navi">
         <ul>
             <li><a href="#sec1">section 1</a></li>
             <li><a href="#sec2">section 2</a></li>
@@ -101,7 +101,7 @@
             <li><a href="#sec4">section 4</a></li>
             <li><a href="#sec5">section 5</a></li>
         </ul>
-    </nav> -->
+    </nav>
     <div id="fullpage">
         <div id="visual" class="section">
             <figure class="background"><img src="images/sky-blue.png" alt=""></figure>
@@ -178,6 +178,7 @@
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 //options here
+                anchors:['sec1', 'sec2','sec3','sec4','sec5'],
                 navigation: true,
                 navigationPosition: 'right',
                 autoScrolling:true,
@@ -185,6 +186,7 @@
                 fixedElements: 'header',
 	            fitToSection: true,
                 responsiveHeight: true,
+                keyboardScrolling: true,
 
             });
 

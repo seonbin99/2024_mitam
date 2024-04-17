@@ -11,6 +11,9 @@ body {
     max-width: 1350px;
     margin: 0 auto;
 }
+nav.navi {
+    display: none;
+}
 #fp-nav {
     z-index: 5 !important ;
 }
@@ -296,7 +299,7 @@ header .centerbox .navbox li .lnb li:hover a {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 20;
+    /* zindex 스크립트로 */
 }
 
 #visual .textbox .deco {
