@@ -11,6 +11,9 @@ body {
     max-width: 1350px;
     margin: 0 auto;
 }
+#fp-nav {
+    z-index: 5 !important ;
+}
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
     background: #e31d02;
 }
