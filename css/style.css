@@ -239,6 +239,7 @@ header .centerbox .navbox li .lnb li:hover a {
     top: 0;
     width: 100%;
     overflow: hidden;
+    z-index: 20;
 }
 #visual figure {
     width: 100%;
@@ -248,6 +249,7 @@ header .centerbox .navbox li .lnb li:hover a {
 #visual .fp-tableCell {
     position: relative;
     display: block;
+    z-index: 20;
 }
 #visual figure img {
     width: 100%;
@@ -294,7 +296,7 @@ header .centerbox .navbox li .lnb li:hover a {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 20;
 }
 
 #visual .textbox .deco {
@@ -332,7 +334,7 @@ header .centerbox .navbox li .lnb li:hover a {
     font-size: 37px;
     display: inline-block;
     position: relative;
-    z-index: 200;
+    z-index: 20 !important;
     word-break: keep-all;
 }
 #visual .textbox h2 strong {
