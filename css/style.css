@@ -17,6 +17,9 @@ body {
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
     background: #e31d02;
 }
+#sec1 .textbox::before {
+    z-index: 1; /* 또는 필요에 따라 원하는 z-index 값으로 설정합니다. */
+}
 
 /* header */
 
