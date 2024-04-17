@@ -308,6 +308,7 @@ header .centerbox .navbox li .lnb li:hover a {
     background: rgba(166, 190, 188, 0.9);
     border-radius: 50%;
     animation: cir1 3s forwards, scale 1.5s alternate infinite;
+    z-index: 1;
 }
 @keyframes cir1 {
     0% {
@@ -331,7 +332,7 @@ header .centerbox .navbox li .lnb li:hover a {
     font-size: 37px;
     display: inline-block;
     position: relative;
-    z-index: 3;
+    z-index: 200;
     word-break: keep-all;
 }
 #visual .textbox h2 strong {
