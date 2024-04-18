@@ -293,15 +293,25 @@ header .centerbox .navbox li .lnb li:hover a {
 #visual .textbox {
     position: absolute;
     top: 50%;
-    left: 80%;
-    /* width: 200px; */
-    transform: translate(-50%,-50%);
+    left: 100%;
+    width: 50vw;
+    padding: 40px;
+    background: rgba(255, 255, 255, .7);
+    animation: textani_pc 2s forwards;
+}
+@keyframes textani_pc {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 50%;
+    }
 }
 
-#visual .deco {
+/* #visual .textbox .deco {
     position: absolute;
     top: 50%;
-    left: 80%;
+    left: 50%;
     transform: translate(-50%,-50%) scale(1);
     transform-origin: center center;
     width: 0;
@@ -309,7 +319,8 @@ header .centerbox .navbox li .lnb li:hover a {
     background: rgba(166, 190, 188, 0.9);
     border-radius: 50%;
     animation: cir1 3s forwards, scale 1.5s alternate infinite;
-}
+    z-index: 1;
+} */
 @keyframes cir1 {
     0% {
         width: 0;
@@ -547,6 +558,8 @@ footer a {
         width: auto;
         height: 100%;
     }
+    footer .centerbox {
+    }
 }
 @media screen and (max-width:863px)  {
     footer .centerbox .footermenu {
@@ -580,28 +593,22 @@ footer a {
         }
     }
     #visual .textbox {
-        left: auto;
-        right: 30%;
         transform: translate(0,-50%);
+        animation: textani_mo 2s forwards;
+    }
+    @keyframes textani_mo {
+        0% {
+            left: 100%;
+        }
+        100% {
+            left: 20px;
+        }
     }
     #visual .textbox h2 {
         font-size: 24px;
     }
     #visual .textbox h2 strong {
         font-size: 30px;
-    }
-    #visual .deco {
-        left: auto;
-        right: 30%;
-        transform: translate(0,-50%);
-    }
-    @keyframes scale {
-        0% {
-            transform: translate(0,-50%) scale(1);
-        }
-        100% {
-            transform: translate(0,-50%) scale(1.1);
-        }
     }
     .secText h2 {
         font-size: 24px;
