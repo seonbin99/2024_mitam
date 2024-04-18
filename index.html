@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>미탐시티</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>미탐시티 되라 제발</title>
     <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>        
     <header>
@@ -182,6 +182,20 @@
                 responsiveHeight: true,
                 keyboardScrolling: true,
                 css3:true,
+
+                onLeave: function(origin, destination, direction, trigger) {
+                    var originIndex = origin.index;
+
+                    // 이전 섹션이 구역 2이고 아래로 이동할 때
+                    if (originIndex == 1 && direction == 'up') {
+                        // h2 요소의 z-index를 더 큰 값으로 설정하여 항상 위에 표시
+                        $('#visual .textbox h2').css('z-index', '20');
+                        $('#visual .textbox .deco').css({zIndex:1});
+                    } else {
+                        $('#visual .textbox h2').css('z-index', '20');
+                        $('#visual .textbox .deco').css({zIndex:1});
+                    }
+                }
 
             });
         });
