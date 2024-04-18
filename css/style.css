@@ -291,24 +291,19 @@ header .centerbox .navbox li .lnb li:hover a {
         transform: scale(1);}
 }
 #visual .textbox {
-    position: absolute;
+    position: relative;
     top: 50%;
-    left: 100%;
-    width: 50vw;
+    left: 50%;
     padding: 40px;
-    background: rgba(255, 255, 255, .7);
-    animation: textani_pc 2s forwards;
-}
-@keyframes textani_pc {
-    0% {
-        left: 100%;
-    }
-    100% {
-        left: 50%;
-    }
+    width: 350px;
+    transform: translate(0,-50%);
+    border: 1px solid #000;
+    text-align: center;
+    /* background: rgba(255, 255, 255, .7);
+    animation: textani_pc 2s forwards; */
 }
 
-/* #visual .textbox .deco {
+#visual .textbox .deco {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -318,9 +313,9 @@ header .centerbox .navbox li .lnb li:hover a {
     height: 0;
     background: rgba(166, 190, 188, 0.9);
     border-radius: 50%;
-    animation: cir1 3s forwards, scale 1.5s alternate infinite;
+    animation: cir1 3s forwards;
     z-index: 1;
-} */
+}
 @keyframes cir1 {
     0% {
         width: 0;
