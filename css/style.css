@@ -297,7 +297,6 @@ header .centerbox .navbox li .lnb li:hover a {
     padding: 40px;
     width: 350px;
     transform: translate(0,-50%);
-    border: 1px solid #000;
     text-align: center;
     /* background: rgba(255, 255, 255, .7);
     animation: textani_pc 2s forwards; */
@@ -308,31 +307,26 @@ header .centerbox .navbox li .lnb li:hover a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(1);
-    transform-origin: center center;
-    width: 200px;
-    height: 200px;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
     background: rgba(166, 190, 188, 0.9);
     border-radius: 50%;
-    animation: cir_scale 1s alternate infinite;
+    animation: cir1 3s cubic-bezier(.32,.53,.34,1) infinite ;
     z-index: 1;
 }
 @keyframes cir1 {
     0% {
-        width: 0;
-        height: 0;
+        width: 300px; /* 시작 크기 */
+        height: 300px; /* 시작 크기 */
+    }
+    50% {
+        width: 320px; /* 중간 크기 */
+        height: 320px; /* 중간 크기 */
     }
     100% {
-        width: 350px;
-        height: 350px;
-    }
-}
-@keyframes cir_scale {
-    0% {
-        transform: translate(-50%,-50%) scale(1);
-    }
-    100% {
-        transform: translate(-50%,-50%) scale(1.1);
+        width: 300px; /* 다시 시작 크기로 돌아옴 */
+        height: 300px; /* 다시 시작 크기로 돌아옴 */
     }
 }
 #visual .textbox h2 {
@@ -537,12 +531,16 @@ footer a {
     }
     @keyframes cir1 {
         0% {
-            width: 0;
-            height: 0;
+            width: 36.3vw; /* 시작 크기 */
+            height: 36.3vw; /* 시작 크기 */
+        }
+        50% {
+            width: 40vw; /* 중간 크기 */
+            height: 40vw; /* 중간 크기 */
         }
         100% {
-            width: 36.3vw;
-            height: 36.3vw;
+            width: 36.3vw; /* 다시 시작 크기로 돌아옴 */
+            height: 36.3vw; /* 다시 시작 크기로 돌아옴 */
         }
     }
     
@@ -580,13 +578,18 @@ footer a {
 @media screen and (max-width:640px) {
     @keyframes cir1 {
         0% {
-            width: 0;
-            height: 0;
+            width: 50.4vw;
+            height: 50.4vw;
+        }
+        50% {
+            width: 55vw;
+            height: 55vw;
         }
         100% {
             width: 50.4vw;
             height: 50.4vw;
         }
+        
     }
     #visual .textbox {
         transform: translate(0,-50%);
@@ -664,12 +667,16 @@ footer a {
 @media screen and (max-width:350px) {
     @keyframes cir1 {
         0% {
-            width: 0;
-            height: 0;
+            width: 200px; /* 시작 크기 */
+            height: 200px; /* 시작 크기 */
+        }
+        50% {
+            width: 220px; /* 중간 크기 */
+            height: 220px; /* 중간 크기 */
         }
         100% {
-            width: 200px;
-            height: 200px;
+            width: 200px; /* 다시 시작 크기로 돌아옴 */
+            height: 200px; /* 다시 시작 크기로 돌아옴 */
         }
     }
 } 
