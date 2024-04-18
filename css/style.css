@@ -638,6 +638,9 @@ footer a {
     }
 }
 @media screen and (max-width:410px) {
+    #visual .textbox {
+        width: auto;
+    }
     footer .centerbox {
         flex-direction: column;
         gap: 10px;
