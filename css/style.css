@@ -304,13 +304,14 @@ header .centerbox .navbox li .lnb li:hover a {
 }
 
 #visual .textbox .deco {
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
     transform-origin: center center;
-    width: 0;
-    height: 0;
+    width: 200px;
+    height: 200px;
     background: rgba(166, 190, 188, 0.9);
     border-radius: 50%;
     animation: cir_scale 1s alternate infinite;
