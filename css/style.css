@@ -294,18 +294,14 @@ header .centerbox .navbox li .lnb li:hover a {
     position: absolute;
     top: 50%;
     left: 80%;
-    width: 200px;
+    /* width: 200px; */
     transform: translate(-50%,-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* zindex 스크립트로 */
 }
 
-#visual .textbox .deco {
+#visual .deco {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 80%;
     transform: translate(-50%,-50%) scale(1);
     transform-origin: center center;
     width: 0;
@@ -313,7 +309,6 @@ header .centerbox .navbox li .lnb li:hover a {
     background: rgba(166, 190, 188, 0.9);
     border-radius: 50%;
     animation: cir1 3s forwards, scale 1.5s alternate infinite;
-    z-index: 1;
 }
 @keyframes cir1 {
     0% {
@@ -552,8 +547,6 @@ footer a {
         width: auto;
         height: 100%;
     }
-    footer .centerbox {
-    }
 }
 @media screen and (max-width:863px)  {
     footer .centerbox .footermenu {
@@ -588,14 +581,27 @@ footer a {
     }
     #visual .textbox {
         left: auto;
-        right: 20px;
-        transform: translate(0,50%);
+        right: 30%;
+        transform: translate(0,-50%);
     }
     #visual .textbox h2 {
         font-size: 24px;
     }
     #visual .textbox h2 strong {
         font-size: 30px;
+    }
+    #visual .deco {
+        left: auto;
+        right: 30%;
+        transform: translate(0,-50%);
+    }
+    @keyframes scale {
+        0% {
+            transform: translate(0,-50%) scale(1);
+        }
+        100% {
+            transform: translate(0,-50%) scale(1.1);
+        }
     }
     .secText h2 {
         font-size: 24px;

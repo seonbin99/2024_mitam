@@ -99,8 +99,8 @@
             <figure class="model"><img src="images/model.png" alt=""></figure>
             <div class="textbox">
                 <h2>즐거우니까, <br><strong>미탐시티</strong>로.</h2>
-                <div class="deco"></div>
             </div>
+            <div class="deco"></div>
         </div>
         <div id="section1" class="section" data-anchor="Restaurant">
             <img src="images/section1.jpg" alt="">
@@ -176,21 +176,21 @@
                 keyboardScrolling: true,
                 css3:true,
 
-                onLeave: function(origin, destination, direction, trigger) {
-                    var origin = this;
+                // onLeave: function(origin, destination, direction, trigger) {
+                //     var origin = this;
 
-                    console.log(origin);
-                    console.log(destination);
+                //     console.log(origin);
+                //     console.log(destination);
 
-                    if (destination == 1 && direction == 'up') {
-                        // h2 요소의 z-index를 더 큰 값으로 설정하여 항상 위에 표시
-                        $('#visual .textbox h2').css('z-index', '20');
-                        $('#visual .textbox .deco').css({zIndex:1});
-                    } else {
-                        $('#visual .textbox h2').css('z-index', '20');
-                        $('#visual .textbox .deco').css({zIndex:1});
-                    }
-                }
+                //     if (destination == 1 && direction == 'up') {
+                //         // h2 요소의 z-index를 더 큰 값으로 설정하여 항상 위에 표시
+                //         $('#visual .textbox h2').css('z-index', '20');
+                //         $('#visual .textbox .deco').css({zIndex:1});
+                //     } else {
+                //         $('#visual .textbox h2').css('z-index', '20');
+                //         $('#visual .textbox .deco').css({zIndex:1});
+                //     }
+                // }
 
 			});
 		});
