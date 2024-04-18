@@ -176,14 +176,13 @@
                 keyboardScrolling: true,
                 css3:true,
 
-                onLeave: function(origin, destination, direction, trigger, anchor) {
+                onLeave: function(origin, destination, direction, trigger) {
                     var origin = this;
 
                     console.log(origin);
-                    console.log(anchor);
                     console.log(destination);
 
-                    if (originIndex == 1 && direction == 'up') {
+                    if (destination == 1 && direction == 'up') {
                         // h2 요소의 z-index를 더 큰 값으로 설정하여 항상 위에 표시
                         $('#visual .textbox h2').css('z-index', '20');
                         $('#visual .textbox .deco').css({zIndex:1});
