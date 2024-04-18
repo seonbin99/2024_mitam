@@ -11,3 +11,4 @@ $('header .centerbox nav .ham').on('click',function(){
 })
 $('#visual .textbox h2').css({zIndex:20})
 $('#visual .textbox .deco ').css({zIndex:1})
+
