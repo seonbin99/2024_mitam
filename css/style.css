@@ -313,7 +313,7 @@ header .centerbox .navbox li .lnb li:hover a {
     height: 0;
     background: rgba(166, 190, 188, 0.9);
     border-radius: 50%;
-    animation: cir1 3s forwards , cir_scale 1s alternate infinite;
+    animation: cir_scale 1s alternate infinite;
     z-index: 1;
 }
 @keyframes cir1 {
