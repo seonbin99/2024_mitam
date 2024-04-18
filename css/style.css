@@ -50,7 +50,7 @@ header .centerbox h1 a {
     align-items: center;
 }
 header .centerbox h1 a img {
-    height: 100%;
+    width: 100%;
 }
 header .centerbox nav {
     flex-grow: 1;
