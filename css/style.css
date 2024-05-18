@@ -1,0 +1,916 @@
+@charset "UTF-8";
+@import url(font.css);
+@import url(common.css);
+
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #333;}
+html,body {
+    position: relative;
+    height: 100%;
+}
+/* swiper css */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    font-family: 'Pretendard-Regular';}
+.centerbox {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+nav.navi {
+    display: none;
+}
+#fp-nav {
+    z-index: 5 !important ;
+}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+    background: #e31d02;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #1c2021;
+    position: absolute;
+    z-index: 100 !important;
+    top: 0;
+    left: 0;
+}
+header .centerbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+header .centerbox h1 {
+    width: 100px;
+    height: 100%;
+}
+header .centerbox h1 a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .centerbox h1 a img {
+    width: 100%;
+}
+header .centerbox nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+header .centerbox nav .langbox {
+    display: flex;
+}
+header .centerbox nav .langbox li {
+    font-size: 14px;
+}
+header .centerbox nav .langbox li a {
+    display: inline-block;
+    padding: 3px 10px;
+    border-bottom: 1px solid transparent;
+    color: #fff;
+}
+header .centerbox nav .langbox li.on a {
+    border-bottom: 1px solid #fff;
+}
+header .centerbox nav .gnb {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+header .centerbox nav .gnb li {
+    font-size: 20px;
+    flex-grow: 1;
+    height: 100%;
+    position: relative;
+}
+header .centerbox nav .gnb li a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+header .centerbox nav .gnb li .lnb {
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    max-height: 0;
+    overflow: hidden;
+}
+header .centerbox nav .gnb:hover li .lnb {
+    max-height: 300px;
+}
+header .centerbox nav .gnb li .lnb li {
+    height: 60px;
+    font-size: 18px;
+}
+header .centerbox nav .gnb li .lnb li:hover {
+    background: #1c2021;
+}
+header .centerbox nav .gnb li .lnb li:hover a {
+    color: #fff;
+}
+header .centerbox nav .gnb li .lnb li a {
+    color: #1c2021;
+}
+header .centerbox nav .lnb_bg {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, .8);
+    transition: .3s;
+}
+header .centerbox nav .lnb_bg:hover {
+    height: 180px;
+}
+header .centerbox nav .gnb:hover ~ .lnb_bg {
+    height: 180px;
+}
+header .centerbox nav .ham {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+}
+header .centerbox nav .ham.on span {
+    width: 0;
+    left: 50%;
+}
+header .centerbox nav .ham.on span::before,
+header .centerbox nav .ham.on span::after {
+    width: 30px;
+    left: -15px;
+    background: #1c2021;
+}
+header .centerbox nav .ham.on span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+header .centerbox nav .ham.on span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+header .centerbox nav .ham span {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+header .centerbox nav .ham span::before ,
+header .centerbox nav .ham span::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+header .centerbox nav .ham span::before {
+    top: -12px;
+}
+header .centerbox nav .ham span::after {
+    top: 12px;
+}
+header .centerbox .navbg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, .8);
+    top: 0;
+    right: 0;
+    z-index: 7;
+    display: none;
+}
+header .centerbox .navbox {
+    margin: 100px auto 0 auto;
+    
+    width: 80%;
+}
+header .centerbox .navbox li {
+    width: 100%;
+    font-size: 18px;
+    line-height: 60px;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Pretendard-Medium';
+}
+header .centerbox .navbox li:hover {
+    background: rgba(0, 0, 0, .8);
+}
+header .centerbox .navbox li:hover a {
+    color: #fff;
+}
+header .centerbox .navbox li a {
+    font-size: 16px;
+    display: block;
+}
+header .centerbox .navbox li .lnb {
+    max-height: 0;
+    transition: .3s;
+}
+header .centerbox .navbox li:hover .lnb {
+    max-height: 1000px;
+    background: #fff;
+}
+header .centerbox .navbox li:hover .lnb li a{
+    color: #1c2021;
+}
+header .centerbox .navbox li .lnb li:hover a {
+    color: #fff;
+}
+
+/* visual 영역 */
+#visual {
+    position: relative;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 20;
+}
+#visual figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#visual .fp-tableCell {
+    position: relative;
+    display: block;
+    z-index: 20;
+}
+#visual figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#visual figure.background {
+    /* animation: bgScale 10s forwards; */
+    position: absolute;
+}
+/* @keyframes bgScale {
+    0% {
+        left: -50%;
+    }
+    100% {
+        
+        left: 0;
+    }
+} */
+#visual figure.model {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: modelScale 3s forwards ;
+    transform: scale(1.3);
+}
+#visual figure.model img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+@keyframes modelScale {
+    0% {
+        transform: scale(1.3);}
+    100% {
+        transform: scale(1);}
+}
+#visual .textbox {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    width: 350px;
+    transform: translate(0,-50%);
+    text-align: center;
+    /* background: rgba(255, 255, 255, .7);
+    animation: textani_pc 2s forwards; */
+    z-index: 10;
+}
+
+#visual .textbox .deco {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    background: rgba(166, 190, 188, 0.9);
+    border-radius: 50%;
+    animation: cir1 3s cubic-bezier(.32,.53,.34,1) infinite ;
+    z-index: 1;
+}
+@keyframes cir1 {
+    0% {
+        width: 300px; /* 시작 크기 */
+        height: 300px; /* 시작 크기 */
+    }
+    50% {
+        width: 320px; /* 중간 크기 */
+        height: 320px; /* 중간 크기 */
+    }
+    100% {
+        width: 300px; /* 다시 시작 크기로 돌아옴 */
+        height: 300px; /* 다시 시작 크기로 돌아옴 */
+    }
+}
+#visual .textbox h2 {
+    font-size: 37px;
+    display: inline-block;
+    position: relative;
+    z-index: 20 !important;
+    word-break: keep-all;
+}
+#visual .textbox h2 strong {
+    font-family: 'Pretendard-Bold';
+    font-size: 42px;
+    animation: textcolor 3s forwards;
+    color: #fff;
+}
+@keyframes textcolor {
+    0% {
+        color: #fff;
+    }
+    100% {
+        color: #e31d02;
+    }
+}
+/* section영역 */
+.fp-tableCell {
+    position: relative;
+    display: block !important;
+}
+.section {
+    width: 100%;
+}
+.section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fp-controlArrow.fp-prev {
+    border-width: 20.5px 22px 20.5px 0 !important;
+    border-color: transparent #e31d02 transparent transparent !important;
+}
+.fp-controlArrow.fp-next {
+    border-width: 20.5px 0 20.5px 22px !important;
+    border-color: transparent  transparent transparent #e31d02 !important;
+}
+/* section class의 textbox 공통 */
+.section .secText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+    background: rgba(255, 255, 255, .7);
+}
+.secText h2 {
+    font-size: 37px;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    word-break: keep-all;
+}
+a.viewmore {
+    font-size: 15px;
+    display: inline-block;
+    padding: 5px 12px;
+    border: 1px solid #1c2021;
+    border-radius: 3px;
+    margin-top: 20px;
+    font-family: 'Pretendard-SemiBold';
+}
+
+.secText h2 strong {
+    font-family: 'Pretendard-Bold';
+    font-size: 42px;
+    color: #e31d02;
+}
+.secText p {
+    font-size: 18px;
+}
+
+#section1 .secText {
+    top: 50%;
+    left: 18vw;
+}
+#section2 .secText {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+}
+#section3 .secText {
+    top: 50%;
+    left: 18vw;
+}
+footer {
+    width: 100%;
+    height: auto !important;
+    background: #1c2021;
+    padding: 10px 0;
+}
+footer .centerbox {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #bababa;
+}
+footer .centerbox h1 {
+    width: 100px;
+}
+footer .centerbox .footerwrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    flex-grow: 1;
+}
+footer .centerbox .footermenu {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+}
+footer .centerbox .footermenu li {
+    padding: 5px 10px;
+    position: relative;
+}
+footer .centerbox .footermenu li::before {
+    content: "";
+    width: 2px;
+    height: 7px;
+    background: #bababa;
+    position: absolute;
+    left: 100%;
+    top: 40%;
+    transform: translateY(-50%);
+}
+footer .centerbox .footermenu li:last-child::before {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+footer .centerbox .copy {
+    font-size: 14px;
+    margin-left: 10px;
+}
+.fil0 {fill:#1977F3;fill-rule:nonzero}
+.fil1 {fill:#FEFEFE;fill-rule:nonzero}
+
+footer .sns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 200px;
+    height: 60px;
+    gap: 10px;
+}
+footer .sns a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .sns a.facebook svg {
+    max-width: 300px;
+    border-radius: 10px;
+    width: 45px;
+}
+footer .sns a.insta svg {
+    width: 70px;
+    height: 60px;
+}
+footer a {
+    color: #fff;
+}
+
+/* 서브페이지 */
+
+.sub_visual {
+    padding-top:100px;
+    width: 100%;
+    height: 40vh;
+}
+.sub_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width:1100px) {
+    #visual .textbox h2 {
+        font-size: 28px;
+    }
+    #visual .textbox h2 strong {
+        font-size: 35px;
+    }
+    .secText h2 {
+        font-size: 28px;
+    }
+    .secText h2 strong {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:960px) {
+    header .centerbox nav .gnb li {
+        font-size: 18px;
+    }
+    header .centerbox nav .langbox {
+        display: none;
+    }
+    
+    header .centerbox nav .gnb {
+        display: none;
+    }
+    header .centerbox nav .lnb_bg {
+        display: none;
+    }    
+    header .centerbox nav .ham {
+        display: block;
+    }
+    @keyframes cir1 {
+        0% {
+            width: 36.3vw; /* 시작 크기 */
+            height: 36.3vw; /* 시작 크기 */
+        }
+        50% {
+            width: 40vw; /* 중간 크기 */
+            height: 40vw; /* 중간 크기 */
+        }
+        100% {
+            width: 36.3vw; /* 다시 시작 크기로 돌아옴 */
+            height: 36.3vw; /* 다시 시작 크기로 돌아옴 */
+        }
+    }
+    
+    .section .secText {
+        padding: 5vw;
+    }
+    
+    #visual figure.model img {
+        width: auto;
+        height: 100%;
+    }
+    footer .centerbox {
+    }
+}
+@media screen and (max-width:863px)  {
+    footer .centerbox .footermenu {
+        flex-wrap: wrap;
+    }
+    footer .centerbox .footermenu li {
+        width: 44%;
+        text-align: center;
+    }
+    footer .centerbox .footermenu li:last-child::before {
+        width: 2px;
+        height: 7px;
+        background: #bababa;
+    }
+}
+@media screen and (max-width :691px ) {
+    footer .sns {
+        width: auto;
+    }
+
+}
+@media screen and (max-width:640px) {
+    @keyframes cir1 {
+        0% {
+            width: 50.4vw;
+            height: 50.4vw;
+        }
+        50% {
+            width: 55vw;
+            height: 55vw;
+        }
+        100% {
+            width: 50.4vw;
+            height: 50.4vw;
+        }
+        
+    }
+    #visual .textbox {
+        transform: translate(0,-50%);
+        animation: textani_mo 2s forwards;
+    }
+    @keyframes textani_mo {
+        0% {
+            left: 100%;
+        }
+        100% {
+            left: 20px;
+        }
+    }
+    #visual .textbox h2 {
+        font-size: 24px;
+    }
+    #visual .textbox h2 strong {
+        font-size: 30px;
+    }
+    .secText h2 {
+        font-size: 24px;
+    }
+    .secText h2 strong {
+        font-size: 30px;
+    }
+    .secText p {
+        font-size: 16px;
+    }
+    #section2 .secText {
+        top: 50%;
+        left: 18vw;
+        transform: translateY(0);
+    }
+    footer .centerbox .footermenu {
+        flex-direction: column;
+    }
+    footer .centerbox .footermenu li {
+        width: 100%;
+    }
+    footer .centerbox .footermenu li::before {
+        display: none;
+    }
+    footer .centerbox .copy {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* 서브페이지 */
+
+    .sub_visual {
+        padding-top:100px;
+        width: 100%;
+        height: 50vh;
+    }
+    .sub_visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sub_section {
+        padding: 20px 20px 120px 20px;
+        background: #F6F1E6;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .sub_section .sub_title {
+        text-align: center;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .sub_section .sub_title h2 {
+        font-size: 32px;
+        padding-bottom: 10px ;
+        border-bottom: 1px dashed #000;
+    }
+    .sub_section .sub_title p {
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
+    }
+    /* .sub_section .sub_title p::before, 
+    .sub_section .sub_title p::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 35vw;
+        background: #000;
+    }
+    .sub_section .sub_title p::before {
+        top: 50%;
+        transform: translate(-100%,-50%);
+    } */
+    .sub_section section .sticker {
+        margin-bottom: 30px;
+    }    
+    .sub_section section .sticker .welcome {
+        display: block;
+        padding: 15px 20px;
+        background: #4C7031;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    } 
+    .sub_section section .sticker .welcome p {
+        
+    }
+    .sub_section section .sticker .welcome p strong {
+        font-size: 26px;
+    }
+    .sub_section section .sticker .exbox {
+        word-break: keep-all;
+    }
+    .sub_section section .sticker .exbox h2 {
+        line-height: 30px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .sub_section section .sticker .exbox h2 em {
+        font-size: 26px;
+        font-family: 'Pretendard-SemiBold';
+    }    
+    .sub_section .section1 {
+    }
+    .sub_section .section1 .contents {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .sub_section .section1 .contents li {
+        width: 40%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0px 1px 1px 1px #eeeeee;
+        background: #fff;
+    }
+    .sub_section .section1 .contents li figure {
+        width: 40px;
+        height: 40px;
+    }
+    .sub_section .section1 .contents li figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .sub_section .section1 .contents li b {
+    }
+    .sub_section .immat_slide {
+        height: 60vh;
+        margin-bottom: 30px;
+    }
+    .sub_section .immat_slide .swiper-slide {
+        border-radius: 10px;
+        overflow: hidden;
+    }    
+    .sub_section .section2 .contents {
+    }
+    .sub_section .section2 .contents li {
+    }
+    .sub_section .section2 .contents li h3 {
+        font-size: 24px;
+        padding: 15px 30px;
+    }
+    .sub_section .section2 .contents .cont {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sub_section .section2 .contents .cont li {
+        display: flex;
+        justify-content: space-between;
+    }
+    .sub_section .section2 .contents .cont li figure {
+        width: 50vw;
+        height: 50vw;
+    }
+    .sub_section .section2 .contents .cont li figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .sub_section .section2 .contents .cont li .menu_exbox {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        word-break: keep-all;
+        align-items: flex-start;
+        flex-grow: 0;
+        max-width: 40%;
+    }
+    .menu_exbox h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }    
+    .menu_exbox .menu_ex {
+        font-size: 15px;
+        color: #333;
+    }
+    .menu_exbox .price {
+        font-size: 17px;
+    }
+    .navbar.mo {
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        background: #fbfbfb;
+        border-radius: 10px 10px 0 0;
+        z-index: 1000;
+    }
+    .navbar.mo li {
+        border-radius: 70px;
+        box-shadow: 0px 0px 8px 0px #f2f4f5;
+        background: #fff;
+    }
+    .navbar.mo li a {
+        padding: 10px 15px;
+        display: inline-block;
+    }
+
+
+
+}
+@media screen and (max-width:410px) {
+    footer .centerbox {
+        flex-direction: column;
+        gap: 10px;
+        padding:0 20px;
+    }
+    footer .centerbox .icon {
+        margin-top: 10px;
+    }
+    footer .centerbox .icon .sns a.facebook {
+        height: 55px;
+    }
+    footer  .centerbox .icon .sns {
+        height: auto;
+    }
+    footer .sns a.facebook svg {
+        height: 45px;
+        gap: 0;
+    }
+    footer .centerbox .footermenu li {
+        text-align: left;
+        padding: 5px 0;
+    }
+    footer .centerbox .copy {
+        text-align: left;
+    }
+}
+@media screen and (max-width:350px) {
+    @keyframes cir1 {
+        0% {
+            width: 200px; /* 시작 크기 */
+            height: 200px; /* 시작 크기 */
+        }
+        50% {
+            width: 220px; /* 중간 크기 */
+            height: 220px; /* 중간 크기 */
+        }
+        100% {
+            width: 200px; /* 다시 시작 크기로 돌아옴 */
+            height: 200px; /* 다시 시작 크기로 돌아옴 */
+        }
+    }
+} 
