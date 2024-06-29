@@ -159,8 +159,8 @@ header .centerbox nav .gnb:hover ~ .lnb_bg {
     height: 180px;
 }
 header .centerbox nav .ham {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     position: absolute;
     top: 50%;
     right: 20px;
@@ -209,10 +209,10 @@ header .centerbox nav .ham span::after {
     transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 header .centerbox nav .ham span::before {
-    top: -12px;
+    top: -9px;
 }
 header .centerbox nav .ham span::after {
-    top: 12px;
+    top: 9px;
 }
 header .centerbox .navbg {
     position: absolute;
@@ -790,6 +790,12 @@ footer a {
 
 }
 @media screen and (max-width:640px) {
+    header {
+        height: 70px;
+    }
+    header .centerbox h1 {
+        width: 70px;
+    }
     @keyframes cir1 {
         0% {
             width: 50.4vw;
@@ -1008,6 +1014,7 @@ footer a {
         border-radius: 70px;
         box-shadow: 0px 0px 8px 0px #f2f4f5;
         background: #fff;
+        font-size: 16px;
     }
     .navbar.mo li a {
         padding: 10px 15px;
