@@ -1069,14 +1069,14 @@ footer a {
     }
     input[type=date] {
         color: transparent;
-        font-size: 12px;
+        font-size: 14px;
         font-family: pretendard;
         cursor: pointer;
         padding: 0;
     }
     input[type=time] {
         color: transparent;
-        font-size: 12px;
+        font-size: 14px;
         font-family: pretendard;
         cursor: pointer;
         padding: 0;
