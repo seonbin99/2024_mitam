@@ -1016,13 +1016,13 @@ footer a {
 
     #immat .sub_section .section3 .contents {
         border-radius: 5px;
-        padding: 10px;
+        padding: 10px 0;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 6px;
+        gap: 12px;
     }
     .sub_section .section3 .contents li {
         width: 100%;
@@ -1032,22 +1032,27 @@ footer a {
         align-items: center;
     }
     .sub_section .section3 .contents li label {
-        width: 100px;
+        width: 80px;
         display: inline-block;
     }
     .sub_section .section3 .contents li input {
-        width: 180px;
-        height: 30px;
+        flex-grow: 1;
+        height: 37px;
         padding-left: 10px;
+        box-sizing: border-box;
     }
     .sub_section .section3 .contents li input::placeholder {
         color: #727272;
-        font-size: 12px;
+        font-size: 14px;
     }
     .input-container {
         position: relative;
         display: inline-block;
-        flex-shrink: 1;
+        flex-grow: 1;
+    }
+    
+    .input-container input {
+        width: 100%;
     }
     .placeholder {
         position: absolute;
@@ -1058,7 +1063,7 @@ footer a {
         pointer-events: none;
         transition: 0.2s;
         font-family: pretendard;
-        font-size: 12px;
+        font-size: 14px;
     }
     input[type=date] {
         color: transparent;
@@ -1083,15 +1088,17 @@ footer a {
 
     .sub_section .section3 .contents li textarea::placeholder {
         color: #727272;
-        font-size: 12px;
+        font-size: 14px;
     }
     .sub_section .section3 .contents li textarea {
         flex-grow: 1;
         padding: 10px;
         width: 180px;
+        height: 180px;
     }
     .sub_section .section3 .contents .btnWrap {
         justify-content: flex-end;
+        margin-top: 30px;
     }
     
     .immat_footer {
@@ -1179,7 +1186,7 @@ footer a {
     #notice .sub_section .section3 .contents {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 12px;
     }
 
 
