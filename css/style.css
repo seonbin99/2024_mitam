@@ -1049,10 +1049,12 @@ footer a {
         position: relative;
         display: inline-block;
         flex-grow: 1;
+        display: flex;
     }
     
     .input-container input {
         width: 100%;
+        flex-grow: 1;
     }
     .placeholder {
         position: absolute;
