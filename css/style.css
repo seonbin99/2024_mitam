@@ -461,6 +461,9 @@ footer .centerbox {
 footer .centerbox h1 {
     width: 100px;
 }
+footer .centerbox h1 img {
+    width: 100%;
+}
 footer .centerbox .footerwrap {
     display: flex;
     flex-direction: column;
@@ -532,10 +535,181 @@ footer a {
     width: 100%;
     height: 40vh;
 }
-.sub_visual img {
+#immat .sub_visual {
+    background: url(../images/immat_subvisual.jpg)no-repeat;
+    background-size: cover;
+}
+#notice .sub_visual {
+    background: url(../images/notice_bg.jpg) no-repeat;
+    background-size: cover;
+}
+.sub_section {
+    padding: 20px 50px 120px 50px;
+    background: #f3f0ea;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.sub_section .sub_title {
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.sub_section .sub_title h2 {
+    font-size: 32px;
+    padding-bottom: 10px ;
+    border-bottom: 1px dashed #000;
+}
+.sub_section .sub_title p {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+}
+.sub_section > section {
+    padding: 0;
+    display: none;
+}
+.sub_section > section.focus {
+    display: block;
+}
+#immat .sub_section section .sticker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    gap: 20px;
+    width: 100%;
+}
+#immat .sub_section section .sticker .welcome {
+    display: block;
+    padding: 15px 20px;
+    background: #EC6730;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+} 
+#immat .sub_section section .sticker .welcome p {
+    font-size: 20px;
+    word-break: keep-all;
+}
+#immat .sub_section section .sticker .welcome p strong {
+    font-size: 28px;
+}
+
+#immat .sub_section .immat_slide {
+    height: 80vh;
+    margin-bottom: 100px;
+}
+#immat .sub_section section {
+}
+#immat .sub_section .section1 .contents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+}
+#immat .sub_section .section1 .contents li {
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px 0;
+    gap: 40px;
+    box-shadow: 0px 1px 1px 1px #eeeeee;
+    background: #fff;
+}
+#immat .sub_section .section1 .contents li figure {
+    width: 80px;
+    height: 80px;
+}
+#immat .sub_section .section1 .contents li figure img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+}
+#immat .sub_section .section1 .contents li b {
+    font-size: 20px;
+}
+#immat .sub_section .section2 .exbox {
+    width: 100%;
+    text-align: center;
+}
+#immat .sub_section .section2 .contents .cont {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#immat .sub_section .section2 .contents .cont li {
+    display: flex;
+    justify-content: space-between;
+}
+#immat .sub_section .section2 .contents .cont li figure {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#immat .sub_section .section2 .contents .cont li figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#immat .sub_section .section2 .contents .cont li .menu_exbox {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    word-break: keep-all;
+    align-items: flex-start;
+    flex-grow: 0;
+    max-width: 40%;
+}
+.menu_exbox h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}    
+.menu_exbox .menu_ex {
+    font-size: 15px;
+    color: #333;
+}
+.menu_exbox .price {
+    font-size: 14px;
+}
+/* navbar */
+.navbar {
+    position: relative;
+    top: 0;
+    z-index: 10;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9.3vw;
+}
+.navbar li {
+    font-size: 18px;
+    position: relative;
+}
+.navbar li.on {
+    font-weight: bold;
+}
+.navbar li.on::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #EC6730;
+    top: 0;
+    left: 100%;
+    transform: translateY(-50%);
 }
 
 @media screen and (max-width:1100px) {
@@ -680,93 +854,64 @@ footer a {
     /* 서브페이지 */
 
     .sub_visual {
-        padding-top:100px;
         width: 100%;
-        height: 50vh;
+        height: 30vh;
     }
-    .sub_visual img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
     .sub_section {
-        padding: 20px 20px 120px 20px;
-        background: #F6F1E6;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-    .sub_section .sub_title {
-        text-align: center;
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-    .sub_section .sub_title h2 {
-        font-size: 32px;
-        padding-bottom: 10px ;
-        border-bottom: 1px dashed #000;
+        padding: 20px 20px 120px 20px ;
     }
     .sub_section .sub_title p {
         font-size: 16px;
-        display: inline-block;
-        position: relative;
     }
-    /* .sub_section .sub_title p::before, 
-    .sub_section .sub_title p::after {
+    /* #immat .sub_section .sub_title p::before, 
+    #immat .sub_section .sub_title p::after {
         content: "";
         position: absolute;
         height: 2px;
         width: 35vw;
         background: #000;
     }
-    .sub_section .sub_title p::before {
+    #immat .sub_section .sub_title p::before {
         top: 50%;
         transform: translate(-100%,-50%);
     } */
-    .sub_section section .sticker {
+    #immat .sub_section section .sticker {
         margin-bottom: 30px;
+        flex-direction: column;
     }    
-    .sub_section section .sticker .welcome {
+    #immat .sub_section section .sticker .welcome {
         display: block;
-        padding: 15px 20px;
+        padding: 15px 0;
         background: #4C7031;
         color: #fff;
         text-align: center;
-        margin-bottom: 30px;
         border-radius: 10px;
+        width: 100%;
+        margin-bottom: 20px;
     } 
-    .sub_section section .sticker .welcome p {
+    #immat .sub_section section .sticker .welcome p {
         
     }
-    .sub_section section .sticker .welcome p strong {
+    #immat .sub_section section .sticker .welcome p strong {
         font-size: 26px;
     }
-    .sub_section section .sticker .exbox {
+    #immat .sub_section section .sticker .exbox {
         word-break: keep-all;
     }
-    .sub_section section .sticker .exbox h2 {
+    #immat .sub_section section .sticker .exbox h2 {
         line-height: 30px;
         text-align: center;
         font-size: 16px;
     }
-    .sub_section section .sticker .exbox h2 em {
+    #immat .sub_section section .sticker .exbox h2 em {
         font-size: 26px;
         font-family: 'Pretendard-SemiBold';
     }    
-    .sub_section .section1 {
+    #immat .sub_section .section1 {
     }
-    .sub_section .section1 .contents {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
+    #immat .sub_section .section1 .contents {
     }
-    
-    .sub_section .section1 .contents li {
+    #immat .sub_section .section1 .contents li {
         width: 40%;
         flex-grow: 1;
         display: flex;
@@ -779,52 +924,52 @@ footer a {
         box-shadow: 0px 1px 1px 1px #eeeeee;
         background: #fff;
     }
-    .sub_section .section1 .contents li figure {
+    #immat .sub_section .section1 .contents li figure {
         width: 40px;
         height: 40px;
     }
-    .sub_section .section1 .contents li figure img {
+    #immat .sub_section .section1 .contents li figure img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    .sub_section .section1 .contents li b {
-    }
-    .sub_section .immat_slide {
+    #immat .sub_section .immat_slide {
         height: 60vh;
         margin-bottom: 30px;
     }
-    .sub_section .immat_slide .swiper-slide {
+    #immat .sub_section .immat_slide .swiper-slide {
         border-radius: 10px;
         overflow: hidden;
     }    
-    .sub_section .section2 .contents {
+    #immat .sub_section .section2 .contents {
+        background: rgba(255, 255, 255, .57);
+        border-radius: 5px;
     }
-    .sub_section .section2 .contents li {
+    #immat .sub_section .section2 .contents > li {
+        padding: 0 10px 15px 10px;
+        box-sizing: border-box;
     }
-    .sub_section .section2 .contents li h3 {
+    #immat .sub_section .section2 .contents li h3 {
         font-size: 24px;
-        padding: 15px 30px;
+        padding: 15px 30px 20px 30px;
+        text-align: center;
     }
-    .sub_section .section2 .contents .cont {
+    #immat .sub_section .section2 .contents .cont {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    .sub_section .section2 .contents .cont li {
-        display: flex;
-        justify-content: space-between;
+    #immat .sub_section .section2 .contents .cont li figure {
+        width: 150px;
+        height: 150px;
+        flex-shrink: 0;
     }
-    .sub_section .section2 .contents .cont li figure {
-        width: 50vw;
-        height: 50vw;
-    }
-    .sub_section .section2 .contents .cont li figure img {
+    #immat .sub_section .section2 .contents .cont li figure img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    .sub_section .section2 .contents .cont li .menu_exbox {
+    #immat .sub_section .section2 .contents .cont li .menu_exbox {
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -832,11 +977,11 @@ footer a {
         justify-content: center;
         word-break: keep-all;
         align-items: flex-start;
-        flex-grow: 0;
-        max-width: 40%;
+        flex-grow: 1;
+        max-width: none;
     }
     .menu_exbox h4 {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 10px;
     }    
     .menu_exbox .menu_ex {
@@ -844,19 +989,20 @@ footer a {
         color: #333;
     }
     .menu_exbox .price {
-        font-size: 17px;
     }
     .navbar.mo {
         height: 70px;
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         position: fixed;
+        top: auto;
         bottom: 0;
         background: #fbfbfb;
         border-radius: 10px 10px 0 0;
-        z-index: 1000;
+        z-index: 50;
+        gap: 10px;
     }
     .navbar.mo li {
         border-radius: 70px;
@@ -868,6 +1014,173 @@ footer a {
         display: inline-block;
     }
 
+    #immat .sub_section .section3 .contents {
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    .sub_section .section3 .contents li {
+        width: 100%;
+        min-height: 34px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .sub_section .section3 .contents li label {
+        width: 100px;
+        display: inline-block;
+    }
+    .sub_section .section3 .contents li input {
+        width: 180px;
+        height: 30px;
+        padding-left: 10px;
+    }
+    .sub_section .section3 .contents li input::placeholder {
+        color: #727272;
+        font-size: 12px;
+    }
+    .input-container {
+        position: relative;
+        display: inline-block;
+        flex-shrink: 1;
+    }
+    .placeholder {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: #727272;
+        pointer-events: none;
+        transition: 0.2s;
+        font-family: pretendard;
+        font-size: 12px;
+    }
+    input[type=date] {
+        color: transparent;
+        font-size: 12px;
+        font-family: pretendard;
+        cursor: pointer;
+        padding: 0;
+    }
+    input[type=time] {
+        color: transparent;
+        font-size: 12px;
+        font-family: pretendard;
+        cursor: pointer;
+        padding: 0;
+    }
+    input[type=date].focus {
+        color: #222;
+    }
+    input[type=time].focus {
+        color: #222;
+    }
+
+    .sub_section .section3 .contents li textarea::placeholder {
+        color: #727272;
+        font-size: 12px;
+    }
+    .sub_section .section3 .contents li textarea {
+        flex-grow: 1;
+        padding: 10px;
+        width: 180px;
+    }
+    .sub_section .section3 .contents .btnWrap {
+        justify-content: flex-end;
+    }
+    
+    .immat_footer {
+        padding-bottom: 70px;
+    }
+    
+
+    /* 공지사항 - 새소식 */
+    #notice .sub_section .section1 .contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 7px;
+    }
+    #notice .sub_section .notiBox {
+        background: rgb(252, 251, 247);
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 1px 1px #eeeeee;
+    }
+    #notice .sub_section .notiBox .titleBox {
+        color: #374957;
+        background: url(../images/arrowdown.svg) no-repeat right center;
+        background-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+        padding: 15px 20px 15px 0;
+    }
+    #notice .sub_section .notiBox.active .titleBox {
+        background: url(../images/arrowup.svg) no-repeat right center;
+        background-size: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    #notice .sub_section .notiBox .titleBox .titles {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    #notice .sub_section .notiBox .titleBox .titleInfo {
+        font-size: 13px;
+
+    } 
+    #notice .sub_section .notiBox .notiContents {
+        font-size: 14px;
+        word-break: keep-all;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+        padding: 0 6px;
+        
+    }
+    #notice .sub_section .notiBox.active .notiContents {
+        padding:  10px 6px ;
+        max-height: fit-content;
+        box-sizing: border-box;
+        
+    }
+    #notice .sub_section .notiBox .notiContents .contentBox {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+    }
+    #notice .sub_section .section2 .contents {
+    }
+    #notice .sub_section .section2 .contents .bannerContent {
+        width: 100%;
+        
+    }
+    #notice .sub_section .section2 .contents .bannerContent a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    #notice .sub_section .section2 .contents .bannerContent a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #notice .sub_section .section3 .contents {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
 
 
 }
@@ -912,5 +1225,9 @@ footer a {
             width: 200px; /* 다시 시작 크기로 돌아옴 */
             height: 200px; /* 다시 시작 크기로 돌아옴 */
         }
+    }
+
+    .sub_section .section3 .contents li label {
+        width: 70px;
     }
 } 

@@ -15,144 +15,202 @@
         <!-- include/header.html -->
     </header>
 
-    <div class="sub_visual">
-        <img src="images/m_sub_visual_immat.png" alt="">
-    </div>
-    <div class="sub_section">
-        <div class="sub_title">
-            <h2></h2>
-            <p>매장소개</p>
+    <div id="immat">
+        <div class="sub_visual">
+            <!-- <img src="images/m_sub_visual_immat.png" alt=""> -->
         </div>
-        <section class="section1">
-            <div class="sticker">
-                <div class="welcome">
-                    <p>Welcome to Gyeongju!<br><strong>And I’m mat!</strong>
-                    </p>   
-                </div>
-                <div class="exbox">
-                    <h2>
-                        <em>“ 아임맛</em>은 미탐시티의 즐길거리 중 하나인 ‘맛’을 책임지고 있는 푸드몰입니다.<br>
-        경주 어디에도 맛보지 못한 맛있는 메뉴들과 함께 아임맛을 마음껏 즐겨보세요. <em>“</em>
-                    </h2>
-                </div> 
+        <ul class="navbar">
+            <li class="on" data-nav="0"><a href="#">매장소개</a></li>
+            <li data-nav="1"><a href="#">메뉴</a></li>
+            <li data-nav="2"><a href="#">예약 및 문의</a></li>
+        </ul>
+        <div class="sub_section">
+            <div class="sub_title">
+                <h2>아임맛</h2>
+                <p>매장소개</p>
             </div>
-            
-            <section class="immat_slide">
-                <!-- Swiper -->
-                <div class="swiper mySwiperImmat">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="images/immat_section1_slide1.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/immat_section1_slide2.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/immat_section1_slide3.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/immat_section1_slide4.png" alt="">
-                        </div>
+            <section class="section1 focus" data-nav="0">
+                <div class="sticker">
+                    <div class="welcome">
+                        <p>Welcome to Gyeongju!<br><strong>And I’m mat!</strong>
+                        </p>   
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="exbox">
+                        <h2>
+                            <em>“ 아임맛</em>은 미탐시티의 즐길거리 중 하나인 ‘맛’을 책임지고 있는 푸드몰입니다.<br>
+            경주 어디에도 맛보지 못한 맛있는 메뉴들과 함께 아임맛을 마음껏 즐겨보세요. <em>“</em>
+                        </h2>
+                    </div> 
                 </div>
+                
+                <section class="immat_slide">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiperImmat">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/immat_section1_slide1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/immat_section1_slide2.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/immat_section1_slide3.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/immat_section1_slide4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </section>
+                <ul class="contents">
+                    <li>
+                        <figure><img src="images/immat_icon1.png" alt=""></figure>
+                        <b>단체석 200석</b>
+                    </li>
+                    <li>
+                        <figure><img src="images/immat_icon2.png" alt=""></figure>
+                        <b>유아의자 구비</b>
+                    </li>
+                    <li>
+                        <figure><img src="images/immat_icon3.png" alt=""></figure>
+                        <b>다양한 메뉴</b>
+                    </li>
+                    <li>
+                        <figure><img src="images/immat_icon4.png" alt=""></figure>
+                        <b>무료주차</b>
+                    </li>
+                    <li>
+                        <figure><img src="images/immat_icon5.png" alt=""></figure>
+                        <b>포장,배달 가능</b>
+                    </li>
+                </ul>
             </section>
-            <ul class="contents">
-                <li>
-                    <figure><img src="images/immat_icon1.png" alt=""></figure>
-                    <b>단체석 200석</b>
-                </li>
-                <li>
-                    <figure><img src="images/immat_icon2.png" alt=""></figure>
-                    <b>유아의자 구비</b>
-                </li>
-                <li>
-                    <figure><img src="images/immat_icon3.png" alt=""></figure>
-                    <b>다양한 메뉴</b>
-                </li>
-                <li>
-                    <figure><img src="images/immat_icon4.png" alt=""></figure>
-                    <b>무료주차</b>
-                </li>
-                <li>
-                    <figure><img src="images/immat_icon5.png" alt=""></figure>
-                    <b>포장,배달 가능</b>
-                </li>
-            </ul>
-        </section>
-        <section class="section2">
-            <div class="sticker">
-                <div class="exbox">
-                    <h2>
-                        <em>MENU</em>
-                    </h2>
-                </div> 
-            </div>
-            <ul class="contents">
-                <li>
-                    <h3>정식</h3>
-                    <ul class="cont">
+            <section class="section2" data-nav="1">
+                <div class="sticker">
+                    <div class="exbox">
+                        <h2>
+                            <em>MENU</em>
+                        </h2>
+                    </div> 
+                </div>
+                <ul class="contents">
+                    <li>
+                        <h3>정식</h3>
+                        <ul class="cont">
+                            <li>
+                                <figure>
+                                    <img src="images/menu01_01.jpg" alt="">
+                                </figure>
+                                <div class="menu_exbox">
+                                    <h4>낙지정식</h4>
+                                    <p class="menu_ex">약간 매콤한 고추장 소스에 낙지를 곁들인 낙지 정식</p>
+                                    <p class="price">14,500원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="images/menu01_02.jpg" alt="">
+                                </figure>
+                                <div class="menu_exbox">
+                                    <h4>불고기 정식</h4>
+                                    <p class="menu_ex"></p>
+                                    <p class="price">00000원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="images/menu01_03.jpg" alt="">
+                                </figure>
+                                <div class="menu_exbox">
+                                    <h4>제육정식</h4>
+                                    <p class="menu_ex"></p>
+                                    <p class="price">00000원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="images/menu01_04.jpg" alt="">
+                                </figure>
+                                <div class="menu_exbox">
+                                    <h4>OOOO</h4>
+                                    <p class="menu_ex"></p>
+                                    <p class="price">14,500원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="images/menu01_05.jpg" alt="">
+                                </figure>
+                                <div class="menu_exbox">
+                                    <h4>보쌈정식</h4>
+                                    <p class="menu_ex">약간 매콤한 고추장 소스에 낙지를 곁들인 
+                                        낙지 정식</p>
+                                    <p class="price">15,500원</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section class="section3" data-nav="2">
+                <div class="sticker">
+                    <div class="exbox">
+                        <h2>
+                            <em>1:1 문의</em>
+                        </h2>
+                    </div> 
+                </div>
+    
+                <form action="./">
+                    <ul class="contents">
                         <li>
-                            <figure>
-                                <img src="images/menu01_01.jpg" alt="">
-                            </figure>
-                            <div class="menu_exbox">
-                                <h4>낙지정식</h4>
-                                <p class="menu_ex">약간 매콤한 고추장 소스에 낙지를 곁들인 낙지 정식</p>
-                                <p class="price">14,500원</p>
-                            </div>
+                            <label for="name">성함</label>
+                            <input type="text" id="name" name="name" required placeholder="성함을 입력해주세요.">
+                        </li>
+                        
+                        <li>
+                            <label for="contact">연락처</label>
+                            <input type="tel" id="contact" name="contact" required placeholder="연락처를 입력해주세요.">
                         </li>
                         <li>
-                            <figure>
-                                <img src="images/menu01_02.jpg" alt="">
-                            </figure>
-                            <div class="menu_exbox">
-                                <h4>불고기 정식</h4>
-                                <p class="menu_ex">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p class="price">00000원</p>
-                            </div>
+                            <label for="people">인원</label>
+                            <input type="number" id="people" name="people" min="1" required placeholder="방문 인원을 입력해주세요.">
                         </li>
+                  
                         <li>
-                            <figure>
-                                <img src="images/menu01_03.jpg" alt="">
-                            </figure>
-                            <div class="menu_exbox">
-                                <h4>제육정식</h4>
-                                <p class="menu_ex">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p class="price">00000원</p>
+                            <label for="date">방문 날짜</label>
+                            <div class="input-container">
+                                <input type="date" id="date" name="date" required>
+                                <span class="placeholder">방문 날짜를 선택해주세요.</span>
                             </div>
                         </li>
+                  
                         <li>
-                            <figure>
-                                <img src="images/menu01_04.jpg" alt="">
-                            </figure>
-                            <div class="menu_exbox">
-                                <h4>OOOO</h4>
-                                <p class="menu_ex">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p class="price">14,500원</p>
+                            <label for="time">방문 시간</label>
+                            <div class="input-container">
+                                <input type="time" id="time" name="time" required min="11:00" max="21:00">
+                                <span class="placeholder">방문 시간을 선택해주세요.</span>
                             </div>
                         </li>
+                  
                         <li>
-                            <figure>
-                                <img src="images/menu01_05.jpg" alt="">
-                            </figure>
-                            <div class="menu_exbox">
-                                <h4>보쌈정식</h4>
-                                <p class="menu_ex">약간 매콤한 고추장 소스에 낙지를 곁들인 
-                                    낙지 정식</p>
-                                <p class="price">15,500원</p>
-                            </div>
+                            <label for="special">특이사항</label>
+                            <textarea id="special" name="special" rows="3" placeholder="특이사항을 입력해주세요." ></textarea>
                         </li>
+                  
+                        <li class="btnWrap"><button type="submit" class="submitBtn">예약하기</button></li>
+        
                     </ul>
-                </li>
-            </ul>
-        </section>
+                </form>
+    
+            </section>
+        </div>
     </div>
-    <ul class="navbar mo">
-        <li><a href="#">매장소개</a></li>
-        <li><a href="#">메뉴</a></li>
-        <li><a href="#">예약 및 문의</a></li>
-    </ul>
+
+    <footer class="immat_footer">
+        <!-- include/footer.html -->
+    </footer>
 
 
     <!-- script -->
